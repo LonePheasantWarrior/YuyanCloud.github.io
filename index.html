@@ -290,6 +290,335 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://yuyancloud.github.io/2019/07/30/aboutDOM/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Wxh">
+      <meta itemprop="description" content="我的个人小站">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="番茄花园">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/07/30/aboutDOM/" class="post-title-link" itemprop="url">关于Html DOM</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+
+          
+          
+          
+
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-07-30 09:38:20 / 修改时间：12:12:59" itemprop="dateCreated datePublished" datetime="2019-07-30T09:38:20+08:00">2019-07-30</time>
+            </span>
+          
+
+          
+            
+
+            
+          
+
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          <br>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p><em>很久就听闻DOM的强大了，一直认为他是页面各个元素在内存中的表现形式，然而好像并不是这样。</em>  </p>
+<p><em>严格地讲，以下的DOM节点是指Element，但是DOM节点实际上是Node，在HTML中，Node包括Element、Comment、CDATA_SECTION等很多种，以及根节点Document类型，但是，绝大多数时候我们只关心Element，也就是实际控制页面结构的Node，其他类型的Node忽略即可。根节点Document已经自动绑定为全局变量document。</em></p>
+<h2 id="DOM是什么"><a href="#DOM是什么" class="headerlink" title="DOM是什么"></a>DOM是什么</h2><p>DOM是HTML文档被浏览器解析之后的格式。他是一个树形结构，要改变期结构就需要javaScript来处理。<br>操作一个DOM无外乎就是对其进行<strong>遍历</strong>，<strong>更新</strong>，<strong>添加</strong>，<strong>删除</strong>。</p>
+<h2 id="使用getElement方法获取DOM"><a href="#使用getElement方法获取DOM" class="headerlink" title="使用getElement方法获取DOM"></a>使用<code>getElement</code>方法获取DOM</h2><p>获取DOM可以通过js的<code>document.getElementById()</code>方法获取单个DOM节点，或者通过<code>document.getElementsByTagName()</code>获取<code>TagName</code>为特定名称的一组DOM节点。也可以通过<code>document.getElementsByClassName()</code>获取<code>class</code>属性为特定名称的一组DOM节点。</p>
+<h3 id="以下是获取DOM节点的示例"><a href="#以下是获取DOM节点的示例" class="headerlink" title="以下是获取DOM节点的示例"></a>以下是获取DOM节点的示例</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//首先通过ID获取指定DOM，然后在该DOM上获取tag名称为“myTag”的一组DOM</span></span><br><span class="line"><span class="keyword">var</span> test =  <span class="built_in">document</span>.getElementById(<span class="string">'test'</span>).getElementsByTagNeme(<span class="string">'myTag'</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">//获取test节点下的所有元素</span></span><br><span class="line"><span class="keyword">var</span> test2 = test.children;</span><br><span class="line"></span><br><span class="line"><span class="comment">//获取test的下一个和最后一个节点</span></span><br><span class="line"><span class="keyword">var</span> first = test.firstElementChildren;</span><br><span class="line"><span class="keyword">var</span> last = test.lastElementChildren;</span><br></pre></td></tr></table></figure>
+
+<h2 id="使用querySelector方法获取DOM"><a href="#使用querySelector方法获取DOM" class="headerlink" title="使用querySelector方法获取DOM"></a>使用<code>querySelector</code>方法获取DOM</h2><p>可以通过<code>document.querySelector()</code>和<code>document.querySelectorAll()</code>方法获取selector语法指定的DOM节点</p>
+<h3 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//获取ID为“id1”的元素DOM</span></span><br><span class="line"><span class="keyword">var</span> q1 = <span class="built_in">document</span>.querySelector(<span class="string">'#id1'</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 通过querySelectorAll获取q1节点内的符合条件的所有节点：</span></span><br><span class="line"><span class="keyword">var</span> ps = q1.querySelectorAll(<span class="string">'div.highlighted &gt; p'</span>);</span><br></pre></td></tr></table></figure>
+
+<h2 id="更新DOM"><a href="#更新DOM" class="headerlink" title="更新DOM"></a>更新DOM</h2><p>拿到一个DOM可以直接修改节点的文本，方式有两种。  </p>
+<h3 id="第一种，修改节点的innerHTML属性"><a href="#第一种，修改节点的innerHTML属性" class="headerlink" title="第一种，修改节点的innerHTML属性"></a>第一种，修改节点的<code>innerHTML</code>属性</h3><p>该方式非常强大，可以直接修改该节点下的HTML代码片段。但正因为如此有可能遭到XSS攻击。故如果写入的HTML代码段来自网络，需对其字符串进行HTML编码，保证其无法设置任何HTML标签。<br><em>所谓HTML编码是指将’&lt;’编码为’&amp;lt’等操作</em></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 获取&lt;p id="p-id"&gt;...&lt;/p&gt;</span></span><br><span class="line"><span class="keyword">var</span> p = <span class="built_in">document</span>.getElementById(<span class="string">'p-id'</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 设置文本为abc:</span></span><br><span class="line">p.innerHTML = <span class="string">'ABC'</span>; <span class="comment">// &lt;p id="p-id"&gt;ABC&lt;/p&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 设置HTML:</span></span><br><span class="line">p.innerHTML = <span class="string">'ABC &lt;span style="color:red"&gt;RED&lt;/span&gt; XYZ'</span>;</span><br><span class="line"><span class="comment">// &lt;p&gt;...&lt;/p&gt;的内部结构已修改</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="第二种，修改innerText或者textContent属性"><a href="#第二种，修改innerText或者textContent属性" class="headerlink" title="第二种，修改innerText或者textContent属性"></a>第二种，修改<code>innerText</code>或者<code>textContent</code>属性</h3><p>该方法更加安全，因为这样可以自动对修改的文本进行HTML编码，杜绝了XSS攻击的可能。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 获取&lt;p id="p-id"&gt;...&lt;/p&gt;</span></span><br><span class="line"><span class="keyword">var</span> p = <span class="built_in">document</span>.getElementById(<span class="string">'p-id'</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 设置文本:</span></span><br><span class="line">p.innerText = <span class="string">'&lt;script&gt;alert("Hi")&lt;/script&gt;'</span>;</span><br><span class="line"><span class="comment">// HTML被自动编码，无法设置一个&lt;script&gt;节点:</span></span><br><span class="line"><span class="comment">// &lt;p id="p-id"&gt;&amp;lt;script&amp;gt;alert("Hi")&amp;lt;/script&amp;gt;&lt;/p&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="更新元素的CSS"><a href="#更新元素的CSS" class="headerlink" title="更新元素的CSS"></a>更新元素的CSS</h3><p>修改CSS也是经常需要的操作。DOM节点的style属性对应所有的CSS，可以直接获取或设置。因为CSS允许<code>font-size</code>这样的名称，但它并非JavaScript有效的属性名，所以需要在JavaScript中改写为驼峰式命名<code>fontSize</code>：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 获取&lt;p id="p-id"&gt;...&lt;/p&gt;</span></span><br><span class="line"><span class="keyword">var</span> p = <span class="built_in">document</span>.getElementById(<span class="string">'p-id'</span>);</span><br><span class="line"><span class="comment">// 设置CSS:</span></span><br><span class="line">p.style.color = <span class="string">'#ff0000'</span>;</span><br><span class="line">p.style.fontSize = <span class="string">'20px'</span>;</span><br><span class="line">p.style.paddingTop = <span class="string">'2em'</span>;</span><br></pre></td></tr></table></figure>
+
+<h2 id="插入DOM"><a href="#插入DOM" class="headerlink" title="插入DOM"></a>插入DOM</h2><h3 id="使用innerHTML"><a href="#使用innerHTML" class="headerlink" title="使用innerHTML"></a>使用<code>innerHTML</code></h3><p>如果获取到的DOM节点是空的，比如<code>&lt;div&gt;&lt;/div&gt;</code>，可直接使用<code>innerHTML</code>属性进行内容修改</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mydiv.innerHTML = <span class="string">'&lt;span&gt;Hello_World&lt;/span&gt;'</span>;</span><br></pre></td></tr></table></figure>
+
+<h3 id="使用appendChild"><a href="#使用appendChild" class="headerlink" title="使用appendChild"></a>使用<code>appendChild</code></h3><p>以上这种DOM插入方式会将该DOM原有的内容覆盖（丢失子节点）<br>只想添加不覆盖的话可以使用<code>appendChild</code>方法将新节点添加到该元素子节点的末尾</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- HTML结构 --&gt;</span><br><span class="line">&lt;p id=<span class="string">"js"</span>&gt;JavaScript&lt;<span class="regexp">/p&gt;</span></span><br><span class="line"><span class="regexp">&lt;div id="list"&gt;</span></span><br><span class="line"><span class="regexp">    &lt;p id="java"&gt;Java&lt;/</span>p&gt;</span><br><span class="line">    &lt;p id=<span class="string">"python"</span>&gt;Python&lt;<span class="regexp">/p&gt;</span></span><br><span class="line"><span class="regexp">    &lt;p id="scheme"&gt;Scheme&lt;/</span>p&gt;</span><br><span class="line">&lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">/</span><span class="regexp">/把&lt;p id="js"&gt;JavaScript&lt;/</span>p&gt;添加到&lt;div id=<span class="string">"list"</span>&gt;的最后一项：</span><br><span class="line"><span class="keyword">var</span></span><br><span class="line">    js = <span class="built_in">document</span>.getElementById(<span class="string">'js'</span>),</span><br><span class="line">    list = <span class="built_in">document</span>.getElementById(<span class="string">'list'</span>);</span><br><span class="line">list.appendChild(js);</span><br><span class="line"></span><br><span class="line"><span class="comment">//因为我们插入的js节点已经存在于当前的文档树，因此这个节点首先会从原先的位置删除，再插入到新的位置。</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//现在，HTML结构变成了这样：</span></span><br><span class="line">&lt;!-- HTML结构 --&gt;</span><br><span class="line">&lt;div id=<span class="string">"list"</span>&gt;</span><br><span class="line">    &lt;p id=<span class="string">"java"</span>&gt;Java&lt;<span class="regexp">/p&gt;</span></span><br><span class="line"><span class="regexp">    &lt;p id="python"&gt;Python&lt;/</span>p&gt;</span><br><span class="line">    &lt;p id=<span class="string">"scheme"</span>&gt;Scheme&lt;<span class="regexp">/p&gt;</span></span><br><span class="line"><span class="regexp">    &lt;p id="js"&gt;JavaScript&lt;/</span>p&gt;</span><br><span class="line">&lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">/</span><span class="regexp">/更多的时候我们会从零创建一个新的节点，然后插入到指定位置：</span></span><br><span class="line"><span class="regexp">var</span></span><br><span class="line"><span class="regexp">    list = document.getElementById('list'),</span></span><br><span class="line"><span class="regexp">    haskell = document.createElement('p');</span></span><br><span class="line"><span class="regexp">haskell.id = 'haskell';</span></span><br><span class="line"><span class="regexp">haskell.innerText = 'Haskell';</span></span><br><span class="line"><span class="regexp">list.appendChild(haskell);</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="使用insertBefor"><a href="#使用insertBefor" class="headerlink" title="使用insertBefor"></a>使用insertBefor</h3><p>如果我们要把子节点插入到指定的位置怎么办？可以使用<code>parentElement.insertBefore(newElement, referenceElement);</code>，子节点会插入到<code>referenceElement</code>之前。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//假定我们要把Haskell插入到Python之前：</span></span><br><span class="line">&lt;!-- HTML结构 --&gt;</span><br><span class="line">&lt;div id=<span class="string">"list"</span>&gt;</span><br><span class="line">    &lt;p id=<span class="string">"java"</span>&gt;Java&lt;<span class="regexp">/p&gt;</span></span><br><span class="line"><span class="regexp">    &lt;p id="python"&gt;Python&lt;/</span>p&gt;</span><br><span class="line">    &lt;p id=<span class="string">"scheme"</span>&gt;Scheme&lt;<span class="regexp">/p&gt;</span></span><br><span class="line"><span class="regexp">&lt;/</span>div&gt;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span></span><br><span class="line">    list = <span class="built_in">document</span>.getElementById(<span class="string">'list'</span>),</span><br><span class="line">    ref = <span class="built_in">document</span>.getElementById(<span class="string">'python'</span>),</span><br><span class="line">    haskell = <span class="built_in">document</span>.createElement(<span class="string">'p'</span>);</span><br><span class="line">haskell.id = <span class="string">'haskell'</span>;</span><br><span class="line">haskell.innerText = <span class="string">'Haskell'</span>;</span><br><span class="line">list.insertBefore(haskell, ref);</span><br><span class="line"></span><br><span class="line"><span class="comment">//新的HTML结构如下：</span></span><br><span class="line">&lt;!-- HTML结构 --&gt;</span><br><span class="line">&lt;div id=<span class="string">"list"</span>&gt;</span><br><span class="line">    &lt;p id=<span class="string">"java"</span>&gt;Java&lt;<span class="regexp">/p&gt;</span></span><br><span class="line"><span class="regexp">    &lt;p id="haskell"&gt;Haskell&lt;/</span>p&gt;</span><br><span class="line">    &lt;p id=<span class="string">"python"</span>&gt;Python&lt;<span class="regexp">/p&gt;</span></span><br><span class="line"><span class="regexp">    &lt;p id="scheme"&gt;Scheme&lt;/</span>p&gt;</span><br><span class="line">&lt;<span class="regexp">/div&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>可见，使用<code>insertBefore</code>重点是要拿到一个“参考子节点”的引用。很多时候，需要循环一个父节点的所有子节点，可以通过迭代<code>children</code>属性实现：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span></span><br><span class="line">    i, c,</span><br><span class="line">    list = <span class="built_in">document</span>.getElementById(<span class="string">'list'</span>);</span><br><span class="line"><span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; list.children.length; i++) &#123;</span><br><span class="line">    c = list.children[i]; <span class="comment">// 拿到第i个子节点</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="删除DOM节点"><a href="#删除DOM节点" class="headerlink" title="删除DOM节点"></a>删除DOM节点</h2><p>删除DOM节点首先的获取被删除的节点，通过该节点的父类调用<code>removeChild()</code>方法将其删除</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> self = <span class="built_in">document</span>.getElementById(<span class="string">'domForRemove'</span>);</span><br><span class="line"><span class="keyword">var</span> parent = serlf.parentElement;</span><br><span class="line"><span class="keyword">var</span> removedDom = parent.removeChild(self);</span><br><span class="line"></span><br><span class="line">self ===removedDom;     <span class="comment">//true</span></span><br><span class="line"><span class="comment">//目标节点被删除之后依然会在内存中保留，保存其引用可以在任何时候重新启用</span></span><br></pre></td></tr></table></figure>
+
+<p>注意 <strong><code>chlidren</code>属性</strong>是只读的，并且会随着其父节点的变化实时更新，所以不能进行如下操作：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> parent = <span class="built_in">document</span>.getElementById(<span class="string">'parent'</span>);</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">let</span> i=<span class="number">0</span>;i&lt;parent.children.length;i++)&#123;</span><br><span class="line">    parent.removeChild(parent.children[i]); <span class="comment">//该行代码在第二次执行时会报错，因为parent.child属性的长度发生了变化</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>因此，删除多个节点时，要注意children属性时刻都在变化。</p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://yuyancloud.github.io/2019/07/26/keepReading/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Wxh">
+      <meta itemprop="description" content="我的个人小站">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="番茄花园">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/07/26/keepReading/" class="post-title-link" itemprop="url">书读百遍，其意自现</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+
+          
+          
+          
+
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-07-26 16:09:22 / 修改时间：16:11:43" itemprop="dateCreated datePublished" datetime="2019-07-26T16:09:22+08:00">2019-07-26</time>
+            </span>
+          
+
+          
+            
+
+            
+          
+
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          <br>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>最近突然对“书读百遍其意自现”这句话有很深的感触。<br>前阵子是我最迷茫的时间段…<br>to be continue…</p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://yuyancloud.github.io/2019/07/25/aboutCSS/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -983,7 +1312,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">4</span>
+                    <span class="site-state-item-count">6</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -1000,7 +1329,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">1</span>
+                      
+                    
+                    <span class="site-state-item-count">2</span>
                     <span class="site-state-item-name">标签</span>
                   
                 </div>
