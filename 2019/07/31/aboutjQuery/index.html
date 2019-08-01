@@ -94,17 +94,18 @@
 
 
 
-  <meta name="description" content="我的个人小站">
-<meta name="keywords" content="博客">
-<meta property="og:type" content="website">
-<meta property="og:title" content="番茄花园">
-<meta property="og:url" content="https://yuyancloud.github.io/index.html">
+  <meta name="description" content="以下内容均有参考幕雪峰的官方网站jQuery我们都比较熟悉了，直接上干货吧 选择器按照ID查找12// 查找&amp;lt;div id=&quot;abc&quot;&amp;gt;:var div = $(&apos;#abc&apos;);  以上代码中返回的div是jQuery对象，它的内容是一个数组，如果id表达式&amp;#39;#abc&amp;#39;指向了一个不存在的元素也不会导致div变成undefined，它只会是一个内容为空数组的jQuery对">
+<meta name="keywords" content="javaScript">
+<meta property="og:type" content="article">
+<meta property="og:title" content="关于jQuery">
+<meta property="og:url" content="https://yuyancloud.github.io/2019/07/31/aboutjQuery/index.html">
 <meta property="og:site_name" content="番茄花园">
-<meta property="og:description" content="我的个人小站">
+<meta property="og:description" content="以下内容均有参考幕雪峰的官方网站jQuery我们都比较熟悉了，直接上干货吧 选择器按照ID查找12// 查找&amp;lt;div id=&quot;abc&quot;&amp;gt;:var div = $(&apos;#abc&apos;);  以上代码中返回的div是jQuery对象，它的内容是一个数组，如果id表达式&amp;#39;#abc&amp;#39;指向了一个不存在的元素也不会导致div变成undefined，它只会是一个内容为空数组的jQuery对">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-08-01T10:27:42.331Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="番茄花园">
-<meta name="twitter:description" content="我的个人小站">
+<meta name="twitter:title" content="关于jQuery">
+<meta name="twitter:description" content="以下内容均有参考幕雪峰的官方网站jQuery我们都比较熟悉了，直接上干货吧 选择器按照ID查找12// 查找&amp;lt;div id=&quot;abc&quot;&amp;gt;:var div = $(&apos;#abc&apos;);  以上代码中返回的div是jQuery对象，它的内容是一个数组，如果id表达式&amp;#39;#abc&amp;#39;指向了一个不存在的元素也不会导致div变成undefined，它只会是一个内容为空数组的jQuery对">
 
 
 
@@ -112,7 +113,7 @@
 
   
   
-  <link rel="canonical" href="https://yuyancloud.github.io/">
+  <link rel="canonical" href="https://yuyancloud.github.io/2019/07/31/aboutjQuery/">
 
 
 
@@ -122,7 +123,7 @@
   };
 </script>
 
-  <title>番茄花园</title>
+  <title>关于jQuery | 番茄花园</title>
   
 
 
@@ -170,8 +171,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -213,7 +213,7 @@
         
         
           
-          <li class="menu-item menu-item-home menu-item-active">
+          <li class="menu-item menu-item-home">
 
     
     
@@ -273,9 +273,9 @@
           
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -307,10 +307,8 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/07/31/aboutjQuery/" class="post-title-link" itemprop="url">关于jQuery</a>
+          <h1 class="post-title" itemprop="name headline">关于jQuery
+
               
             
           </h1>
@@ -387,9 +385,7 @@
       
 
       
-        
-          
-            <p><strong>以下内容均有参考<a href="https://www.liaoxuefeng.com/" target="_blank" rel="noopener">幕雪峰的官方网站</a></strong><br>jQuery我们都比较熟悉了，直接上干货吧</p>
+        <p><strong>以下内容均有参考<a href="https://www.liaoxuefeng.com/" target="_blank" rel="noopener">幕雪峰的官方网站</a></strong><br>jQuery我们都比较熟悉了，直接上干货吧</p>
 <h2 id="选择器"><a href="#选择器" class="headerlink" title="选择器"></a>选择器</h2><h3 id="按照ID查找"><a href="#按照ID查找" class="headerlink" title="按照ID查找"></a>按照ID查找</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 查找&lt;div id="abc"&gt;:</span></span><br><span class="line"><span class="keyword">var</span> div = $(<span class="string">'#abc'</span>);</span><br></pre></td></tr></table></figure>
 
 <p>以上代码中返回的<code>div</code>是jQuery对象，它的内容是一个数组，如果id表达式<code>&#39;#abc&#39;</code>指向了一个不存在的元素也不会导致<code>div</code>变成<code>undefined</code>，它只会是一个内容为空数组的jQuery对象。  </p>
@@ -689,8 +685,6 @@
 
 <p><em>扩展jQuery对象的功能十分简单，但是我们要遵循jQuery的原则，编写的扩展方法能支持链式调用、具备默认值和过滤特定元素，使得扩展方法看上去和jQuery本身的方法没有什么区别</em></p>
 
-          
-        
       
     </div>
 
@@ -711,355 +705,39 @@
 
     <footer class="post-footer">
       
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://yuyancloud.github.io/2019/07/30/aboutHumanHappiness/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Wxh">
-      <meta itemprop="description" content="我的个人小站">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="番茄花园">
-    </span>
-
-    
-      <header class="post-header">
-
         
+          
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/07/30/aboutHumanHappiness/" class="post-title-link" itemprop="url">关于人类的幸福感</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-
+        <div class="post-tags">
           
+            <a href="/tags/javaScript/" rel="tag"># javaScript</a>
           
-          
-
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2019-07-30 18:14:41 / 修改时间：18:38:50" itemprop="dateCreated datePublished" datetime="2019-07-30T18:14:41+08:00">2019-07-30</time>
-            </span>
-          
-
-          
-            
-
-            
-          
-
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          <br>
-          
-
-          
-
-          
-
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>今天看了幕雪峰博客中的<a href https: www.liaoxuefeng.com article 1111900878270624"">人工智能时代的危机</a>，引出了下文我对人类幸福感的思考。  </p>
-<h2 id="关于人类的幸福感"><a href="#关于人类的幸福感" class="headerlink" title="关于人类的幸福感"></a>关于人类的幸福感</h2><p>个人愚见，随着科技的发展人类的幸福感在与日俱减。</p>
-<h4 id="幸福感的来源"><a href="#幸福感的来源" class="headerlink" title="幸福感的来源"></a>幸福感的来源</h4><p>关于幸福感的来源，我认为是来自与他人的交互，还有身体各项激素水平（生理体验）。还有环境压力也是影响人幸福感的重要指标。<br>根据我个人的体验，身边大部分的人的幸福感是在逐年下降的，我承认这观点与我自己的心态变化有很大关系，的确我自己的幸福感是在逐年下降的。在我离开学校步入社会后我感受到了前所未有的孤独，压力。但这并不影响我观察整个世界，好吧不是致命影响，完全没影响我自己都不信。<br>言归正传，为什么我认为幸福的来源在于与他人的交互，因为我观察到随着社交网络的发达现实的与他人交心的现象越来越少了，人与人之间的互动在减少，这影响了人的思考方式。与他人交互的情况大多发生在工作时这种不可避免的情形，当我们得闲时往往会选择与电子产品为伴，手机是我们最忠实且最有趣的伙伴，他取代了很多人，也夺走了我们很多的幸福。其次还有电脑，游戏机…<br>至于身体各项激素水平，最直接的影响因素就是运动量，当代人普遍缺乏运动，缺乏运动会导致身体减少释放“幸福感”相关的激素，这是直接了当的幸福感减少实例。 其次人们在手机电脑等数码产品上的长时间投入会导致大部分人的睡眠时间延后，睡眠时间延后也是导致人“幸福感”相关激素水平低下的重要原因，或者可以说是最重要的原因。<br>最后便是环境压力，环境压力的增大伴随着人们用脑时间，用脑强度的增加，这也很好去理解，毕竟体力劳动者的数量也在逐年减少。<br>to be continue……</p>
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
       
 
       
       
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
       
 
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://yuyancloud.github.io/2019/07/30/aboutDOM/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Wxh">
-      <meta itemprop="description" content="我的个人小站">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="番茄花园">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/07/30/aboutDOM/" class="post-title-link" itemprop="url">关于Html DOM</a>
-              
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
             
-          </h1>
-        
-
-        <div class="post-meta">
-
-          
-          
-          
-
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2019-07-30 09:38:20" itemprop="dateCreated datePublished" datetime="2019-07-30T09:38:20+08:00">2019-07-30</time>
-            </span>
-          
-
-          
+              <a href="/2019/07/30/aboutHumanHappiness/" rel="next" title="关于人类的幸福感">
+                <i class="fa fa-chevron-left"></i> 关于人类的幸福感
+              </a>
             
+          </div>
 
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
             
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2019-07-31 16:59:27" itemprop="dateModified" datetime="2019-07-31T16:59:27+08:00">2019-07-31</time>
-              </span>
-            
-          
-
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          <br>
-          
-
-          
-
-          
-
+          </div>
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          
-            <p><strong>以下内容均有参考<a href="https://www.liaoxuefeng.com/" target="_blank" rel="noopener">幕雪峰的官方网站</a></strong><br><em>很久就听闻DOM的强大了，一直认为他是页面各个元素在内存中的表现形式，然而好像并不是这样。</em>  </p>
-<p><em>严格地讲，以下的DOM节点是指Element，但是DOM节点实际上是Node，在HTML中，Node包括Element、Comment、CDATA_SECTION等很多种，以及根节点Document类型，但是，绝大多数时候我们只关心Element，也就是实际控制页面结构的Node，其他类型的Node忽略即可。根节点Document已经自动绑定为全局变量document。</em></p>
-<h2 id="DOM是什么"><a href="#DOM是什么" class="headerlink" title="DOM是什么"></a>DOM是什么</h2><p>DOM是HTML文档被浏览器解析之后的格式。他是一个树形结构，要改变期结构就需要javaScript来处理。<br>操作一个DOM无外乎就是对其进行<strong>遍历</strong>，<strong>更新</strong>，<strong>添加</strong>，<strong>删除</strong>。</p>
-<h2 id="使用getElement方法获取DOM"><a href="#使用getElement方法获取DOM" class="headerlink" title="使用getElement方法获取DOM"></a>使用<code>getElement</code>方法获取DOM</h2><p>获取DOM可以通过js的<code>document.getElementById()</code>方法获取单个DOM节点，或者通过<code>document.getElementsByTagName()</code>获取<code>TagName</code>为特定名称的一组DOM节点。也可以通过<code>document.getElementsByClassName()</code>获取<code>class</code>属性为特定名称的一组DOM节点。</p>
-<h3 id="以下是获取DOM节点的示例"><a href="#以下是获取DOM节点的示例" class="headerlink" title="以下是获取DOM节点的示例"></a>以下是获取DOM节点的示例</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//首先通过ID获取指定DOM，然后在该DOM上获取tag名称为“myTag”的一组DOM</span></span><br><span class="line"><span class="keyword">var</span> test =  <span class="built_in">document</span>.getElementById(<span class="string">'test'</span>).getElementsByTagNeme(<span class="string">'myTag'</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">//获取test节点下的所有元素</span></span><br><span class="line"><span class="keyword">var</span> test2 = test.children;</span><br><span class="line"></span><br><span class="line"><span class="comment">//获取test的下一个和最后一个节点</span></span><br><span class="line"><span class="keyword">var</span> first = test.firstElementChildren;</span><br><span class="line"><span class="keyword">var</span> last = test.lastElementChildren;</span><br></pre></td></tr></table></figure>
-
-<h2 id="使用querySelector方法获取DOM"><a href="#使用querySelector方法获取DOM" class="headerlink" title="使用querySelector方法获取DOM"></a>使用<code>querySelector</code>方法获取DOM</h2><p>可以通过<code>document.querySelector()</code>和<code>document.querySelectorAll()</code>方法获取selector语法指定的DOM节点</p>
-<h3 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//获取ID为“id1”的元素DOM</span></span><br><span class="line"><span class="keyword">var</span> q1 = <span class="built_in">document</span>.querySelector(<span class="string">'#id1'</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 通过querySelectorAll获取q1节点内的符合条件的所有节点：</span></span><br><span class="line"><span class="keyword">var</span> ps = q1.querySelectorAll(<span class="string">'div.highlighted &gt; p'</span>);</span><br></pre></td></tr></table></figure>
-
-<h2 id="更新DOM"><a href="#更新DOM" class="headerlink" title="更新DOM"></a>更新DOM</h2><p>拿到一个DOM可以直接修改节点的文本，方式有两种。  </p>
-<h3 id="第一种，修改节点的innerHTML属性"><a href="#第一种，修改节点的innerHTML属性" class="headerlink" title="第一种，修改节点的innerHTML属性"></a>第一种，修改节点的<code>innerHTML</code>属性</h3><p>该方式非常强大，可以直接修改该节点下的HTML代码片段。但正因为如此有可能遭到XSS攻击。故如果写入的HTML代码段来自网络，需对其字符串进行HTML编码，保证其无法设置任何HTML标签。<br><em>所谓HTML编码是指将’&lt;’编码为’&amp;lt’等操作</em></p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 获取&lt;p id="p-id"&gt;...&lt;/p&gt;</span></span><br><span class="line"><span class="keyword">var</span> p = <span class="built_in">document</span>.getElementById(<span class="string">'p-id'</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 设置文本为abc:</span></span><br><span class="line">p.innerHTML = <span class="string">'ABC'</span>; <span class="comment">// &lt;p id="p-id"&gt;ABC&lt;/p&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 设置HTML:</span></span><br><span class="line">p.innerHTML = <span class="string">'ABC &lt;span style="color:red"&gt;RED&lt;/span&gt; XYZ'</span>;</span><br><span class="line"><span class="comment">// &lt;p&gt;...&lt;/p&gt;的内部结构已修改</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="第二种，修改innerText或者textContent属性"><a href="#第二种，修改innerText或者textContent属性" class="headerlink" title="第二种，修改innerText或者textContent属性"></a>第二种，修改<code>innerText</code>或者<code>textContent</code>属性</h3><p>该方法更加安全，因为这样可以自动对修改的文本进行HTML编码，杜绝了XSS攻击的可能。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 获取&lt;p id="p-id"&gt;...&lt;/p&gt;</span></span><br><span class="line"><span class="keyword">var</span> p = <span class="built_in">document</span>.getElementById(<span class="string">'p-id'</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 设置文本:</span></span><br><span class="line">p.innerText = <span class="string">'&lt;script&gt;alert("Hi")&lt;/script&gt;'</span>;</span><br><span class="line"><span class="comment">// HTML被自动编码，无法设置一个&lt;script&gt;节点:</span></span><br><span class="line"><span class="comment">// &lt;p id="p-id"&gt;&amp;lt;script&amp;gt;alert("Hi")&amp;lt;/script&amp;gt;&lt;/p&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="更新元素的CSS"><a href="#更新元素的CSS" class="headerlink" title="更新元素的CSS"></a>更新元素的CSS</h3><p>修改CSS也是经常需要的操作。DOM节点的style属性对应所有的CSS，可以直接获取或设置。因为CSS允许<code>font-size</code>这样的名称，但它并非JavaScript有效的属性名，所以需要在JavaScript中改写为驼峰式命名<code>fontSize</code>：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 获取&lt;p id="p-id"&gt;...&lt;/p&gt;</span></span><br><span class="line"><span class="keyword">var</span> p = <span class="built_in">document</span>.getElementById(<span class="string">'p-id'</span>);</span><br><span class="line"><span class="comment">// 设置CSS:</span></span><br><span class="line">p.style.color = <span class="string">'#ff0000'</span>;</span><br><span class="line">p.style.fontSize = <span class="string">'20px'</span>;</span><br><span class="line">p.style.paddingTop = <span class="string">'2em'</span>;</span><br></pre></td></tr></table></figure>
-
-<h2 id="插入DOM"><a href="#插入DOM" class="headerlink" title="插入DOM"></a>插入DOM</h2><h3 id="使用innerHTML"><a href="#使用innerHTML" class="headerlink" title="使用innerHTML"></a>使用<code>innerHTML</code></h3><p>如果获取到的DOM节点是空的，比如<code>&lt;div&gt;&lt;/div&gt;</code>，可直接使用<code>innerHTML</code>属性进行内容修改</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mydiv.innerHTML = <span class="string">'&lt;span&gt;Hello_World&lt;/span&gt;'</span>;</span><br></pre></td></tr></table></figure>
-
-<h3 id="使用appendChild"><a href="#使用appendChild" class="headerlink" title="使用appendChild"></a>使用<code>appendChild</code></h3><p>以上这种DOM插入方式会将该DOM原有的内容覆盖（丢失子节点）<br>只想添加不覆盖的话可以使用<code>appendChild</code>方法将新节点添加到该元素子节点的末尾</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- HTML结构 --&gt;</span><br><span class="line">&lt;p id=<span class="string">"js"</span>&gt;JavaScript&lt;<span class="regexp">/p&gt;</span></span><br><span class="line"><span class="regexp">&lt;div id="list"&gt;</span></span><br><span class="line"><span class="regexp">    &lt;p id="java"&gt;Java&lt;/</span>p&gt;</span><br><span class="line">    &lt;p id=<span class="string">"python"</span>&gt;Python&lt;<span class="regexp">/p&gt;</span></span><br><span class="line"><span class="regexp">    &lt;p id="scheme"&gt;Scheme&lt;/</span>p&gt;</span><br><span class="line">&lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">/</span><span class="regexp">/把&lt;p id="js"&gt;JavaScript&lt;/</span>p&gt;添加到&lt;div id=<span class="string">"list"</span>&gt;的最后一项：</span><br><span class="line"><span class="keyword">var</span></span><br><span class="line">    js = <span class="built_in">document</span>.getElementById(<span class="string">'js'</span>),</span><br><span class="line">    list = <span class="built_in">document</span>.getElementById(<span class="string">'list'</span>);</span><br><span class="line">list.appendChild(js);</span><br><span class="line"></span><br><span class="line"><span class="comment">//因为我们插入的js节点已经存在于当前的文档树，因此这个节点首先会从原先的位置删除，再插入到新的位置。</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//现在，HTML结构变成了这样：</span></span><br><span class="line">&lt;!-- HTML结构 --&gt;</span><br><span class="line">&lt;div id=<span class="string">"list"</span>&gt;</span><br><span class="line">    &lt;p id=<span class="string">"java"</span>&gt;Java&lt;<span class="regexp">/p&gt;</span></span><br><span class="line"><span class="regexp">    &lt;p id="python"&gt;Python&lt;/</span>p&gt;</span><br><span class="line">    &lt;p id=<span class="string">"scheme"</span>&gt;Scheme&lt;<span class="regexp">/p&gt;</span></span><br><span class="line"><span class="regexp">    &lt;p id="js"&gt;JavaScript&lt;/</span>p&gt;</span><br><span class="line">&lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">/</span><span class="regexp">/更多的时候我们会从零创建一个新的节点，然后插入到指定位置：</span></span><br><span class="line"><span class="regexp">var</span></span><br><span class="line"><span class="regexp">    list = document.getElementById('list'),</span></span><br><span class="line"><span class="regexp">    haskell = document.createElement('p');</span></span><br><span class="line"><span class="regexp">haskell.id = 'haskell';</span></span><br><span class="line"><span class="regexp">haskell.innerText = 'Haskell';</span></span><br><span class="line"><span class="regexp">list.appendChild(haskell);</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="使用insertBefor"><a href="#使用insertBefor" class="headerlink" title="使用insertBefor"></a>使用insertBefor</h3><p>如果我们要把子节点插入到指定的位置怎么办？可以使用<code>parentElement.insertBefore(newElement, referenceElement);</code>，子节点会插入到<code>referenceElement</code>之前。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//假定我们要把Haskell插入到Python之前：</span></span><br><span class="line">&lt;!-- HTML结构 --&gt;</span><br><span class="line">&lt;div id=<span class="string">"list"</span>&gt;</span><br><span class="line">    &lt;p id=<span class="string">"java"</span>&gt;Java&lt;<span class="regexp">/p&gt;</span></span><br><span class="line"><span class="regexp">    &lt;p id="python"&gt;Python&lt;/</span>p&gt;</span><br><span class="line">    &lt;p id=<span class="string">"scheme"</span>&gt;Scheme&lt;<span class="regexp">/p&gt;</span></span><br><span class="line"><span class="regexp">&lt;/</span>div&gt;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span></span><br><span class="line">    list = <span class="built_in">document</span>.getElementById(<span class="string">'list'</span>),</span><br><span class="line">    ref = <span class="built_in">document</span>.getElementById(<span class="string">'python'</span>),</span><br><span class="line">    haskell = <span class="built_in">document</span>.createElement(<span class="string">'p'</span>);</span><br><span class="line">haskell.id = <span class="string">'haskell'</span>;</span><br><span class="line">haskell.innerText = <span class="string">'Haskell'</span>;</span><br><span class="line">list.insertBefore(haskell, ref);</span><br><span class="line"></span><br><span class="line"><span class="comment">//新的HTML结构如下：</span></span><br><span class="line">&lt;!-- HTML结构 --&gt;</span><br><span class="line">&lt;div id=<span class="string">"list"</span>&gt;</span><br><span class="line">    &lt;p id=<span class="string">"java"</span>&gt;Java&lt;<span class="regexp">/p&gt;</span></span><br><span class="line"><span class="regexp">    &lt;p id="haskell"&gt;Haskell&lt;/</span>p&gt;</span><br><span class="line">    &lt;p id=<span class="string">"python"</span>&gt;Python&lt;<span class="regexp">/p&gt;</span></span><br><span class="line"><span class="regexp">    &lt;p id="scheme"&gt;Scheme&lt;/</span>p&gt;</span><br><span class="line">&lt;<span class="regexp">/div&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p>可见，使用<code>insertBefore</code>重点是要拿到一个“参考子节点”的引用。很多时候，需要循环一个父节点的所有子节点，可以通过迭代<code>children</code>属性实现：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span></span><br><span class="line">    i, c,</span><br><span class="line">    list = <span class="built_in">document</span>.getElementById(<span class="string">'list'</span>);</span><br><span class="line"><span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; list.children.length; i++) &#123;</span><br><span class="line">    c = list.children[i]; <span class="comment">// 拿到第i个子节点</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="删除DOM节点"><a href="#删除DOM节点" class="headerlink" title="删除DOM节点"></a>删除DOM节点</h2><p>删除DOM节点首先的获取被删除的节点，通过该节点的父类调用<code>removeChild()</code>方法将其删除</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> self = <span class="built_in">document</span>.getElementById(<span class="string">'domForRemove'</span>);</span><br><span class="line"><span class="keyword">var</span> parent = serlf.parentElement;</span><br><span class="line"><span class="keyword">var</span> removedDom = parent.removeChild(self);</span><br><span class="line"></span><br><span class="line">self ===removedDom;     <span class="comment">//true</span></span><br><span class="line"><span class="comment">//目标节点被删除之后依然会在内存中保留，保存其引用可以在任何时候重新启用</span></span><br></pre></td></tr></table></figure>
-
-<p>注意 <strong><code>chlidren</code>属性</strong>是只读的，并且会随着其父节点的变化实时更新，所以不能进行如下操作：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> parent = <span class="built_in">document</span>.getElementById(<span class="string">'parent'</span>);</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">let</span> i=<span class="number">0</span>;i&lt;parent.children.length;i++)&#123;</span><br><span class="line">    parent.removeChild(parent.children[i]); <span class="comment">//该行代码在第二次执行时会报错，因为parent.child属性的长度发生了变化</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>因此，删除多个节点时，要注意children属性时刻都在变化。</p>
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -1069,826 +747,15 @@
   </article>
 
 
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://yuyancloud.github.io/2019/07/26/keepReading/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Wxh">
-      <meta itemprop="description" content="我的个人小站">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="番茄花园">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/07/26/keepReading/" class="post-title-link" itemprop="url">书读百遍，其意自现</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-
-          
-          
-          
-
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2019-07-26 16:09:22 / 修改时间：16:11:43" itemprop="dateCreated datePublished" datetime="2019-07-26T16:09:22+08:00">2019-07-26</time>
-            </span>
-          
-
-          
-            
-
-            
-          
-
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          <br>
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>最近突然对“书读百遍其意自现”这句话有很深的感触。<br>前阵子是我最迷茫的时间段…<br>to be continue…</p>
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
   </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://yuyancloud.github.io/2019/07/25/aboutCSS/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Wxh">
-      <meta itemprop="description" content="我的个人小站">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="番茄花园">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/07/25/aboutCSS/" class="post-title-link" itemprop="url">关于CSS样式</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-
-          
-          
-          
-
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2019-07-25 15:15:58" itemprop="dateCreated datePublished" datetime="2019-07-25T15:15:58+08:00">2019-07-25</time>
-            </span>
-          
-
-          
-            
-
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2019-07-31 16:59:21" itemprop="dateModified" datetime="2019-07-31T16:59:21+08:00">2019-07-31</time>
-              </span>
-            
-          
-
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          <br>
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p><strong>以下内容均有参考<a href="https://www.liaoxuefeng.com/" target="_blank" rel="noopener">幕雪峰的官方网站</a></strong><br><em>好久没接触前端的技术了，其实关于css样式的使用一直都是比较模糊，一来是几乎不用，二来是基本没有去系统的学习过，过几天公司要考核H5借此机会好好学习一下</em></p>
-<h2 id="CSS的种类"><a href="#CSS的种类" class="headerlink" title="CSS的种类"></a>CSS的种类</h2><p>有三种，分别是<strong>内嵌样式（行内样式）</strong>，<strong>文档内嵌样式表</strong>，<strong>外部样式表</strong><br>生效优先级为内嵌样式&gt;文档内嵌样式&gt;外部样式。</p>
-<h2 id="CSS选择器"><a href="#CSS选择器" class="headerlink" title="CSS选择器"></a>CSS选择器</h2><p>基本选择器有：  </p>
-<ul>
-<li>选择所有元素</li>
-<li>根据类型选择元素</li>
-<li>根据类选择元素</li>
-<li>根据ID选择元素</li>
-<li>根据属性选择元素</li>
-<li>其他选择器…  </li>
-</ul>
-<p>: (动作)选择器:  </p>
-<ul>
-<li>…<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">//全选</span><br><span class="line">* &#123;</span><br><span class="line">    <span class="attribute">color</span>: red;</span><br><span class="line">&#125;</span><br><span class="line">//类型选择器</span><br><span class="line"><span class="selector-tag">input</span> &#123;</span><br><span class="line">    <span class="attribute">color</span>: red;</span><br><span class="line">&#125;</span><br><span class="line">//类选择器</span><br><span class="line"><span class="selector-class">.myclass</span> &#123;</span><br><span class="line">    <span class="attribute">color</span>: red;</span><br><span class="line">&#125;</span><br><span class="line">//id选择器</span><br><span class="line"><span class="selector-id">#myid</span> &#123;</span><br><span class="line">    <span class="attribute">color</span>: red;</span><br><span class="line">&#125;</span><br><span class="line">//属性选择器</span><br><span class="line"><span class="selector-attr">[href]</span> &#123;</span><br><span class="line">    <span class="attribute">color</span>: red;</span><br><span class="line">&#125;</span><br><span class="line">//指定属性值选择器</span><br><span class="line"><span class="selector-attr">[href=background.jpg]</span> &#123;</span><br><span class="line">    <span class="attribute">color</span>: red;</span><br><span class="line">&#125;</span><br><span class="line">//动作选择器</span><br><span class="line"><span class="selector-tag">a</span><span class="selector-pseudo">:hover</span> &#123;</span><br><span class="line">    <span class="attribute">color</span>: red;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
-<h2 id="css样式设置"><a href="#css样式设置" class="headerlink" title="css样式设置"></a>css样式设置</h2><h3 id="关于背景"><a href="#关于背景" class="headerlink" title="关于背景"></a>关于背景</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">* &#123;</span><br><span class="line">    <span class="attribute">background-image</span>: <span class="built_in">url</span>(backound.jpg);</span><br><span class="line">    <span class="attribute">background-size</span>: auto;</span><br><span class="line">    //设置背景重复规则</span><br><span class="line">    <span class="selector-tag">background-repeat</span>: <span class="selector-tag">no-repeat</span>;</span><br><span class="line">    //设置背景固定规则(固定相对位置)</span><br><span class="line">    <span class="selector-tag">background-attachment</span>: <span class="selector-tag">fixed</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="关于对齐方式"><a href="#关于对齐方式" class="headerlink" title="关于对齐方式"></a>关于对齐方式</h3><p>有两种对齐方式可供选择，通过<strong>CSS层叠样式表</strong>，或者使用<strong>Html5核心规范</strong>实现。</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">//通过CSS</span><br><span class="line"><span class="selector-class">.class1</span> &#123;</span><br><span class="line">    <span class="attribute">text-align</span>: center;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">//使用Html5核心规范</span><br><span class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">align</span>=<span class="string">"center"</span>&gt;</span>文本<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="css文本格式"><a href="#css文本格式" class="headerlink" title="css文本格式"></a>css文本格式</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">* &#123;</span><br><span class="line">    //指定字母间距</span><br><span class="line">    <span class="selector-tag">letter-spacing</span>: 100<span class="selector-tag">px</span>;</span><br><span class="line"></span><br><span class="line">    //指定单词间间距(只适用于英文)</span><br><span class="line">    <span class="selector-tag">word-spacing</span>: 100<span class="selector-tag">px</span>;</span><br><span class="line"></span><br><span class="line">    //设定行高</span><br><span class="line">    <span class="selector-tag">line-height</span>: 20<span class="selector-tag">px</span>;</span><br><span class="line"></span><br><span class="line">    //设定首行缩进</span><br><span class="line">    <span class="selector-tag">text-indent</span>: 30<span class="selector-tag">px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="css文本装饰"><a href="#css文本装饰" class="headerlink" title="css文本装饰"></a>css文本装饰</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.class1</span>&#123;</span><br><span class="line">    //增加下划线，删除线等操作</span><br><span class="line">    <span class="selector-tag">text-decoration</span>: ...</span><br><span class="line"></span><br><span class="line">    //每个单词首字母自动大写(只适用于英文)</span><br><span class="line">    <span class="selector-tag">text-transform</span>: <span class="selector-tag">capitalize</span>;</span><br><span class="line"></span><br><span class="line">    //所有字母转换成大写(只适用于英文)</span><br><span class="line">    <span class="selector-tag">text-transform</span>: <span class="selector-tag">uppercase</span>;</span><br><span class="line"></span><br><span class="line">    //所有字母转换成小写(只适用于英文)</span><br><span class="line">    <span class="selector-tag">text-transform</span>: <span class="selector-tag">lowercase</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="css文本样式设置"><a href="#css文本样式设置" class="headerlink" title="css文本样式设置"></a>css文本样式设置</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">* &#123;</span><br><span class="line">    //设置字体</span><br><span class="line">    <span class="selector-tag">font-family</span>: 微软雅黑;</span><br><span class="line"></span><br><span class="line">    //设置字体大小</span><br><span class="line">    <span class="selector-tag">font-size</span>: 40<span class="selector-tag">px</span>;</span><br><span class="line"></span><br><span class="line">    //设置字体样式(正常/斜体/倾斜字体)</span><br><span class="line">    <span class="selector-tag">font-style</span>: ...;</span><br><span class="line"></span><br><span class="line">    //将字体设置为小型大写(比普通大写体小一些)</span><br><span class="line">    <span class="selector-tag">font-variant</span>: <span class="selector-tag">small-caps</span>;</span><br><span class="line"></span><br><span class="line">    //设置字体粗细(轻重)</span><br><span class="line">    <span class="selector-tag">font-weight</span>: ...;</span><br><span class="line"></span><br><span class="line">    //设置文本阴影</span><br><span class="line">    <span class="selector-tag">text-shadow</span>: 10<span class="selector-tag">px</span> 10<span class="selector-tag">px</span> 5<span class="selector-tag">px</span> <span class="selector-tag">red</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="css动画效果"><a href="#css动画效果" class="headerlink" title="css动画效果"></a>css动画效果</h2><p><strong><em>这才是页面的灵魂啊</em></strong></p>
-<h3 id="css过度动画"><a href="#css过度动画" class="headerlink" title="css过度动画"></a>css过度动画</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">* &#123;</span><br><span class="line">    //设置动画触发延迟</span><br><span class="line">    <span class="selector-tag">transition-delay</span>: 150<span class="selector-tag">ms</span>;</span><br><span class="line"></span><br><span class="line">    //设置过度动画耗时[好功能啊，注入灵魂]</span><br><span class="line">    <span class="selector-tag">transition-duration</span>: 450<span class="selector-tag">ms</span>;</span><br><span class="line"></span><br><span class="line">    //指定过度元素(未被指定的元素无过度效果)(例如指定背景颜色过度，其他未被指定的效果将无过度)</span><br><span class="line">    <span class="selector-tag">transition-property</span>: <span class="selector-tag">background-color</span>;</span><br><span class="line"></span><br><span class="line">    //指定过度元素(声明宽度过度效果)</span><br><span class="line">    <span class="selector-tag">transition-property</span>: <span class="selector-tag">width</span>;</span><br><span class="line"></span><br><span class="line">    //设置动画速度策略(例如先快后慢，先慢后快再慢，先快后慢再快...)</span><br><span class="line">    <span class="selector-tag">transition-timing-function</span>: <span class="selector-tag">ease-in</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="css动画"><a href="#css动画" class="headerlink" title="css动画"></a>css动画</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line">//调用动画</span><br><span class="line">*<span class="selector-pseudo">:hover</span> &#123;</span><br><span class="line">    //设置动画过度时间</span><br><span class="line">    <span class="selector-tag">animation-duration</span>: 450<span class="selector-tag">ms</span>;</span><br><span class="line"></span><br><span class="line">    //设置动画触发延迟</span><br><span class="line">    <span class="selector-tag">animation-delay</span>: 200<span class="selector-tag">ms</span>;</span><br><span class="line"></span><br><span class="line">    //声明引用的动画名称</span><br><span class="line">    <span class="selector-tag">animation-name</span>: <span class="selector-tag">default-animation</span>;</span><br><span class="line"></span><br><span class="line">    //设置动画循环次数(比如无限循环)</span><br><span class="line">    //当动画播放完毕后目标一定会恢复动画播放之前的样式</span><br><span class="line">    <span class="selector-tag">animation-iteration-count</span>: <span class="selector-tag">infinite</span>;</span><br><span class="line"></span><br><span class="line">    //设置动画过度策略(比如反向播放)</span><br><span class="line">    //反向播放动画也计入播放次数</span><br><span class="line">    <span class="selector-tag">animation-direction</span>: <span class="selector-tag">alternate</span>;</span><br><span class="line"></span><br><span class="line">    //设置元素停留在动画最后一帧(永久固定)</span><br><span class="line">    <span class="selector-tag">animation-fill-mode</span>: <span class="selector-tag">forwards</span>;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line">//定义动画</span><br><span class="line">//设置动画名称</span><br><span class="line">@<span class="keyword">keyframes</span> default-animation &#123;</span><br><span class="line">    <span class="selector-tag">from</span> &#123;</span><br><span class="line">        <span class="attribute">width</span>: <span class="number">150px</span>;</span><br><span class="line">        <span class="attribute">height</span>: <span class="number">150px</span>;</span><br><span class="line">        <span class="attribute">background-color</span>: blue;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    50% &#123;</span><br><span class="line">        <span class="attribute">width</span>: <span class="number">160px</span>;</span><br><span class="line">        <span class="attribute">height</span>: <span class="number">160px</span>;</span><br><span class="line">        <span class="attribute">background-color</span>: blue;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    78% &#123;</span><br><span class="line">        <span class="attribute">width</span>: <span class="number">180px</span>;</span><br><span class="line">        <span class="attribute">height</span>: <span class="number">180px</span>;</span><br><span class="line">        <span class="attribute">background-color</span>: red;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="selector-tag">to</span> &#123;</span><br><span class="line">        <span class="attribute">width</span>: <span class="number">200px</span>;</span><br><span class="line">        <span class="attribute">height</span>: <span class="number">200px</span>;</span><br><span class="line">        <span class="attribute">background-color</span>: red;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="动画与过度的区别"><a href="#动画与过度的区别" class="headerlink" title="动画与过度的区别"></a>动画与过度的区别</h3><p>过度可以改变目标元素的样式<br>动画在播放结束后元素一定会恢复到播放之前的样式</p>
-<h3 id="css变换"><a href="#css变换" class="headerlink" title="css变换"></a>css变换</h3><p><em>变换功能无视元素边框</em></p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.targetClass</span> &#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">100px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">100px</span>;</span><br><span class="line">    <span class="attribute">background-color</span>: blue;</span><br><span class="line"></span><br><span class="line">    //使用变换功能旋转元素(旋转30度)</span><br><span class="line">    <span class="selector-tag">transform</span>: <span class="selector-tag">rotate</span>(30<span class="selector-tag">deg</span>);</span><br><span class="line">    //设置旋转中心点(默认为元素中心)</span><br><span class="line">    <span class="selector-tag">transform-origin</span>: <span class="selector-tag">bottom</span> <span class="selector-tag">right</span>;</span><br><span class="line"></span><br><span class="line">    //使用缩放功能(参数为缩放倍数)</span><br><span class="line">    <span class="selector-tag">transform</span>: <span class="selector-tag">scale</span>(1<span class="selector-class">.5</span>);</span><br><span class="line"></span><br><span class="line">    //缩放x轴</span><br><span class="line">    <span class="selector-tag">transform</span>: <span class="selector-tag">scale</span>(1<span class="selector-class">.8</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="兼容性"><a href="#兼容性" class="headerlink" title="兼容性"></a>兼容性</h2><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">* &#123;</span><br><span class="line">    //不同浏览器的渲染逻辑不同（大概），总之比如指定chrome内核渲染声明动画过度耗时需要：</span><br><span class="line">    <span class="selector-tag">-webkit-transition-duration</span>: 450<span class="selector-tag">sm</span>;</span><br><span class="line">    //如果是opera的话：</span><br><span class="line">    <span class="selector-tag">-o-transition-duration</span>: 450<span class="selector-tag">sm</span>;</span><br><span class="line">    //如果是微软家族的浏览器的话：</span><br><span class="line">    <span class="selector-tag">-ms-transtion-duration</span>: 450<span class="selector-tag">sm</span>;</span><br><span class="line">    //如果是火狐浏览器的话：</span><br><span class="line">    <span class="selector-tag">-moz-transtion-duration</span>: 450<span class="selector-tag">sm</span>;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">    这里我就不懂了，这个前缀有什么卵用  </span></span><br><span class="line"><span class="comment">    没这个前缀浏览器就不能解析了吗？非得要这个前缀？  </span></span><br><span class="line"><span class="comment">    有毒吧,我认为这个前缀缺乏合理的必要性</span></span><br><span class="line"><span class="comment">    **/</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://yuyancloud.github.io/2019/07/16/HttpClient/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Wxh">
-      <meta itemprop="description" content="我的个人小站">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="番茄花园">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/07/16/HttpClient/" class="post-title-link" itemprop="url">HttpClient的用法总结</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-
-          
-          
-          
-
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2019-07-16 10:05:26" itemprop="dateCreated datePublished" datetime="2019-07-16T10:05:26+08:00">2019-07-16</time>
-            </span>
-          
-
-          
-            
-
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2019-07-17 11:10:03" itemprop="dateModified" datetime="2019-07-17T11:10:03+08:00">2019-07-17</time>
-              </span>
-            
-          
-
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          <br>
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p><em>HttpClient 的官方文档看了有好几天了，因为是英文的所以看的很慢，越发觉得英文水平差对我的影响很大。</em></p>
-<h3 id="首先对https机制进行一个介绍"><a href="#首先对https机制进行一个介绍" class="headerlink" title="首先对https机制进行一个介绍"></a>首先对https机制进行一个介绍</h3><p>我个人的理解，从http到https主要是在通讯的时候对数据进行了一层加密包装，对应的加密层称之为SSL层（security sockets layer，安全套接层），从SSL3.0版本之后称之为TLS层（Transport Layer Security，传输层安全协议），该层位于TCP与HTTP中间。<br>TLS是为了保证身份认证和数据加密，首先身份认证就需要用到CA证书了。</p>
-<h4 id="关于SSL"><a href="#关于SSL" class="headerlink" title="关于SSL"></a>关于SSL</h4><p>SSL协议分为两层,一层是记录协议（SSL Record Protocol）:<br>　　它建立在可靠的传输协议（如TCP）之上，为高层协议提供数据封装、压缩、加密等基本功能的支持。<br>一层是握手协议（SSL Handshake Protocol）:<br>　　用于在实际的数据传输开始前，通讯双方进行<strong>身份认证</strong>、<strong>协商加密算法</strong>、<strong>交换加密密钥</strong>等。<br>记录协议位于底层，握手协议位于上层。</p>
-<h4 id="关于TLS"><a href="#关于TLS" class="headerlink" title="关于TLS"></a>关于TLS</h4><p>TLS协议是SSL协议的后续版本，它建立在SSL协议的规范之上。TLS的版本1.0使用的版本号为SSLv3.1。<br>TLS分为两层，一层是记录协议（TLS Record），一层是握手协议（TLS HandShake）。</p>
-<h4 id="TLS密钥协商过程"><a href="#TLS密钥协商过程" class="headerlink" title="TLS密钥协商过程"></a>TLS密钥协商过程</h4><p>TLS HandShake用于协商密钥，TLS Record用于指定数据格式。<br>由于非对称加密的加解密效率低下，所以非对称加密通讯只负责交换用于对称加解密的密钥，然后通过对称加解密进行通讯。<br>SSL缺省只进行服务端认证，客户端认证是可选的。</p>
-<h4 id="关于CA证书："><a href="#关于CA证书：" class="headerlink" title="关于CA证书："></a>关于CA证书：</h4><p>CA证书的内容有：<br>　　颁发者<br>　　使用者<br>　　版本<br>　　签名　　<br>　　签名算法<br>　　公钥<br>　　指纹<br>　　指纹算法<br>　　…<br>颁发者：证书颁发者有很多，国际上比较出名的是美国的verisign公司，加拿大的ENTRUST公司，大部分客户端都默认信任了这些公司的根证书。<br>使用者：我也不知道，看样子是证书的被颁发者。<br>版本：就是版本啦 - -<br>签名：将报文摘要进行hash计算得到报文的hash值，再将该值使用签名算法进行加密得到。该值用于验证报文的完整性。<br>签名算法：加密报文hash值的算法。<br>公钥：对应CA证书的公钥。<br>指纹/指纹算法：不知道。</p>
-<p>“根证书”是CA证书的关键（或者可以说是所有证书的关键），“证书链”的根既是“根证书”。<br>当目前的主机信任相关的根证书时，其根证书下的子证书也就默认信任了。<br>目前常见的HTTPS客户端都有默认的证书根目录，包含了大多数授信机构的根证书。<br><strong>也就是说如果要用java写一个类浏览器证书验证机制的HttpClient的话需要自行添加常见证书机构的根证书，有点麻烦啊。</strong></p>
-<h3 id="直接发一个基于TLS的HTTP-POST请求"><a href="#直接发一个基于TLS的HTTP-POST请求" class="headerlink" title="直接发一个基于TLS的HTTP POST请求"></a>直接发一个基于TLS的HTTP POST请求</h3><p>在之前我是这么想的：<br><em>我的思路是这样的，首先获取目标服务器的证书，然后轮询其判断它的有效性，当发现有证书无效时抛出异常。<br>目前如何判断对应证书的有效性暂时还没有思路，走一步算一步吧。</em><br>现在我不打算这么做了，主要出于两个原因：  </p>
-<ol>
-<li>授信机构种类多，下载他们对应的根证书太麻烦。</li>
-<li>最主要的是实际生产中几乎没有这种需求。通常都是针对性的验证目标服务器的证书，更多情况下是忽略证书验证.</li>
-</ol>
-<h3 id="发起一个忽略证书验证的HttpPost请求"><a href="#发起一个忽略证书验证的HttpPost请求" class="headerlink" title="发起一个忽略证书验证的HttpPost请求"></a>发起一个忽略证书验证的HttpPost请求</h3><p>忽略证书也好，验证证书也好，其逻辑都定义在SSLConnectionSocketFactory中<br>也就是说首先要创建一个自定一的SSLConnectionSocketFactory类，该类的作用是返回一个套接字对象，用于与服务器进行TLS连接<br>为了建立套接字连接需要定义SSLContext，首先利用它创建对应的SocketFactory，该SocketFactory是安全套接字实际的创建者。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> org.apache.http.HttpEntity;</span><br><span class="line"><span class="keyword">import</span> org.apache.http.HttpResponse;</span><br><span class="line"><span class="keyword">import</span> org.apache.http.HttpStatus;</span><br><span class="line"><span class="keyword">import</span> org.apache.http.client.ClientProtocolException;</span><br><span class="line"><span class="keyword">import</span> org.apache.http.client.HttpClient;</span><br><span class="line"><span class="keyword">import</span> org.apache.http.client.config.RequestConfig;</span><br><span class="line"><span class="keyword">import</span> org.apache.http.client.methods.HttpGet;</span><br><span class="line"><span class="keyword">import</span> org.apache.http.config.SocketConfig;</span><br><span class="line"><span class="keyword">import</span> org.apache.http.conn.ssl.SSLConnectionSocketFactory;</span><br><span class="line"><span class="keyword">import</span> org.apache.http.impl.client.HttpClients;</span><br><span class="line"><span class="keyword">import</span> org.apache.http.impl.conn.PoolingHttpClientConnectionManager;</span><br><span class="line"><span class="keyword">import</span> org.apache.http.util.EntityUtils;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> javax.net.ssl.SSLContext;</span><br><span class="line"><span class="keyword">import</span> javax.net.ssl.TrustManager;</span><br><span class="line"><span class="keyword">import</span> javax.net.ssl.X509TrustManager;</span><br><span class="line"><span class="keyword">import</span> java.io.IOException;</span><br><span class="line"><span class="keyword">import</span> java.security.KeyManagementException;</span><br><span class="line"><span class="keyword">import</span> java.security.NoSuchAlgorithmException;</span><br><span class="line"><span class="keyword">import</span> java.security.cert.CertificateException;</span><br><span class="line"><span class="keyword">import</span> java.security.cert.X509Certificate;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Demo</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> HttpClient httpClient;</span><br><span class="line">    <span class="comment">// 连接超时时间</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">int</span> connectionTimeout = <span class="number">10000</span>;</span><br><span class="line">    <span class="comment">// 读取超时时间</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">int</span> soTimeout = <span class="number">30000</span>;</span><br><span class="line">    <span class="comment">// 访问地址</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> String url = <span class="string">"https://www.baidu.com"</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> SSLContext sslContext;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">httpClientInit</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="comment">// 创建用于进行https请求的socketFactory</span></span><br><span class="line">        SSLConnectionSocketFactory socketFactory = <span class="keyword">new</span> SSLConnectionSocketFactory(getSslContext());</span><br><span class="line">        <span class="comment">// 创建用于执行多线程并发访问的连接池管理器</span></span><br><span class="line">        PoolingHttpClientConnectionManager connectionManager = <span class="keyword">new</span> PoolingHttpClientConnectionManager();</span><br><span class="line">        <span class="comment">// 通过连接管理器设置最大线程数</span></span><br><span class="line">        connectionManager.setMaxTotal(<span class="number">1000</span>);</span><br><span class="line">        <span class="comment">// 通过请求配置类设置请求连接超时时间</span></span><br><span class="line">        RequestConfig requestConfig = RequestConfig.custom().setConnectTimeout(connectionTimeout).build();</span><br><span class="line">        <span class="comment">//: 通过套接字配置类设置读取超时时间</span></span><br><span class="line">        SocketConfig socketConfig =  SocketConfig.custom().setSoTimeout(soTimeout).build();</span><br><span class="line">        httpClient = HttpClients.custom().setSSLSocketFactory(socketFactory).setDefaultSocketConfig(socketConfig)</span><br><span class="line">            .setDefaultRequestConfig(requestConfig).build();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> IOException </span>&#123;</span><br><span class="line">        httpClientInit();</span><br><span class="line"></span><br><span class="line">        HttpGet httpGet = <span class="keyword">new</span> HttpGet(url);</span><br><span class="line">        HttpResponse httpResponse = httpClient.execute(httpGet);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> (HttpStatus.SC_OK &lt;= httpResponse.getStatusLine().getStatusCode() &amp;&amp; HttpStatus.SC_MOVED_TEMPORARILY &gt;= httpResponse.getStatusLine().getStatusCode()) &#123;</span><br><span class="line">            HttpEntity entity = httpResponse.getEntity();</span><br><span class="line">            System.out.println(EntityUtils.toString(entity,<span class="string">"utf-8"</span>));</span><br><span class="line">        &#125;<span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="keyword">throw</span> <span class="keyword">new</span> ClientProtocolException(<span class="string">"请求失败"</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 初始化SSLContext</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">sslContextInit</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            sslContext = SSLContext.getInstance(<span class="string">"SSL"</span>);</span><br><span class="line">            sslContext.init(<span class="keyword">null</span>,<span class="keyword">new</span> TrustManager[] &#123;<span class="keyword">new</span> TrustAnyTrustManager()&#125;,<span class="keyword">null</span>);</span><br><span class="line">        &#125; <span class="keyword">catch</span> (NoSuchAlgorithmException | KeyManagementException e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 获取SSLContext</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">static</span> SSLContext <span class="title">getSslContext</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (sslContext == <span class="keyword">null</span>)&#123;</span><br><span class="line">            sslContextInit();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> sslContext;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="class"><span class="keyword">class</span> <span class="title">TrustAnyTrustManager</span> <span class="keyword">implements</span> <span class="title">X509TrustManager</span></span>&#123;</span><br><span class="line"></span><br><span class="line">        <span class="meta">@Override</span></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">checkClientTrusted</span><span class="params">(X509Certificate[] x509Certificates, String s)</span> <span class="keyword">throws</span> CertificateException </span>&#123;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="meta">@Override</span></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">checkServerTrusted</span><span class="params">(X509Certificate[] x509Certificates, String s)</span> <span class="keyword">throws</span> CertificateException </span>&#123;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="meta">@Override</span></span><br><span class="line">        <span class="keyword">public</span> X509Certificate[] getAcceptedIssuers() &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://yuyancloud.github.io/2019/07/15/myfirestPost/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Wxh">
-      <meta itemprop="description" content="我的个人小站">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="番茄花园">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/07/15/myfirestPost/" class="post-title-link" itemprop="url">其实我不会用markdown...</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-
-          
-          
-          
-
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2019-07-15 18:22:27 / 修改时间：18:33:56" itemprop="dateCreated datePublished" datetime="2019-07-15T18:22:27+08:00">2019-07-15</time>
-            </span>
-          
-
-          
-            
-
-            
-          
-
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          <br>
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="该学习markdowen啦"><a href="#该学习markdowen啦" class="headerlink" title="该学习markdowen啦"></a>该学习markdowen啦</h2><p>好吧我又多了一个需要掌握的技能<br>其实吧，我还有好多要掌握的，spring源码看的一脸懵逼，shell脚本学了一半，spring cloud也没学呢，golang也没学，python也没学，最近看的httpclient也没看完（纯英文的，很难看的），awsl….</p>
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://yuyancloud.github.io/2019/07/15/hello-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Wxh">
-      <meta itemprop="description" content="我的个人小站">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="番茄花园">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/07/15/hello-world/" class="post-title-link" itemprop="url">Hello World</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-
-          
-          
-          
-
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2019-07-15 16:16:44" itemprop="dateCreated datePublished" datetime="2019-07-15T16:16:44+08:00">2019-07-15</time>
-            </span>
-          
-
-          
-
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          <br>
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-  </section>
-
-  
 
 
           </div>
           
+
+  
+
+
 
         </div>
         
@@ -1908,8 +775,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -1974,6 +850,23 @@
         </div>
       </div>
 
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#选择器"><span class="nav-number">1.</span> <span class="nav-text">选择器</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#按照ID查找"><span class="nav-number">1.1.</span> <span class="nav-text">按照ID查找</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#将jQuery对象转换为普通的DOM对象"><span class="nav-number">1.1.1.</span> <span class="nav-text">将jQuery对象转换为普通的DOM对象</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#将DOM对象转换为jQuery对象"><span class="nav-number">1.1.2.</span> <span class="nav-text">将DOM对象转换为jQuery对象</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#按tag查找"><span class="nav-number">1.2.</span> <span class="nav-text">按tag查找</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#按class查找"><span class="nav-number">1.3.</span> <span class="nav-text">按class查找</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#按属性查找"><span class="nav-number">1.4.</span> <span class="nav-text">按属性查找</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#还可以通过属性的前缀或者后缀查找"><span class="nav-number">1.4.1.</span> <span class="nav-text">还可以通过属性的前缀或者后缀查找</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#组合查找"><span class="nav-number">1.5.</span> <span class="nav-text">组合查找</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#多项选择器"><span class="nav-number">1.6.</span> <span class="nav-text">多项选择器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#层级选择器"><span class="nav-number">1.7.</span> <span class="nav-text">层级选择器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#子选择器"><span class="nav-number">1.8.</span> <span class="nav-text">子选择器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#过滤器"><span class="nav-number">1.9.</span> <span class="nav-text">过滤器</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#表单相关的特殊选择器"><span class="nav-number">1.9.1.</span> <span class="nav-text">表单相关的特殊选择器</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#查找和过滤"><span class="nav-number">1.10.</span> <span class="nav-text">查找和过滤</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#查找"><span class="nav-number">1.10.1.</span> <span class="nav-text">查找</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#过滤"><span class="nav-number">1.10.2.</span> <span class="nav-text">过滤</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#操作DOM"><span class="nav-number">2.</span> <span class="nav-text">操作DOM</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#需改CSS"><span class="nav-number">2.1.</span> <span class="nav-text">需改CSS</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#显示和隐藏DOM"><span class="nav-number">2.2.</span> <span class="nav-text">显示和隐藏DOM</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#获取DOM属性"><span class="nav-number">2.3.</span> <span class="nav-text">获取DOM属性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#操作表单"><span class="nav-number">2.4.</span> <span class="nav-text">操作表单</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#修改DOM结构"><span class="nav-number">2.5.</span> <span class="nav-text">修改DOM结构</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#添加DOM节点"><span class="nav-number">2.5.1.</span> <span class="nav-text">添加DOM节点</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#删除DOM节点"><span class="nav-number">2.5.2.</span> <span class="nav-text">删除DOM节点</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#事件处理"><span class="nav-number">3.</span> <span class="nav-text">事件处理</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#事件参数"><span class="nav-number">3.0.1.</span> <span class="nav-text">事件参数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#取消事件绑定"><span class="nav-number">3.0.2.</span> <span class="nav-text">取消事件绑定</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#事件的触发条件"><span class="nav-number">3.0.3.</span> <span class="nav-text">事件的触发条件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#被浏览器限制的事件"><span class="nav-number">3.0.4.</span> <span class="nav-text">被浏览器限制的事件</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#动画"><span class="nav-number">3.1.</span> <span class="nav-text">动画</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#show-hide"><span class="nav-number">3.1.1.</span> <span class="nav-text">show / hide</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#slideUp-slideDown"><span class="nav-number">3.1.2.</span> <span class="nav-text">slideUp / slideDown</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#fadeIn-fadeOut"><span class="nav-number">3.1.3.</span> <span class="nav-text">fadeIn / fadeOut</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#自定义动画"><span class="nav-number">3.1.4.</span> <span class="nav-text">自定义动画</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#串行动画"><span class="nav-number">3.1.5.</span> <span class="nav-text">串行动画</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#为什么有的动画没有效果"><span class="nav-number">3.1.5.1.</span> <span class="nav-text">为什么有的动画没有效果</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#AJAX操作"><span class="nav-number">3.2.</span> <span class="nav-text">AJAX操作</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#get"><span class="nav-number">3.2.1.</span> <span class="nav-text">get</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#post"><span class="nav-number">3.2.2.</span> <span class="nav-text">post</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#getJSON"><span class="nav-number">3.2.3.</span> <span class="nav-text">getJSON</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#ajax安全限制"><span class="nav-number">3.2.4.</span> <span class="nav-text">ajax安全限制</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#扩展jQuery"><span class="nav-number">3.3.</span> <span class="nav-text">扩展jQuery</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#编写jQuery插件"><span class="nav-number">3.3.1.</span> <span class="nav-text">编写jQuery插件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#针对特定元素的扩展"><span class="nav-number">3.3.2.</span> <span class="nav-text">针对特定元素的扩展</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
       
 
       
@@ -2102,6 +995,10 @@
 
 
   
+  <script src="/js/scrollspy.js?v=7.2.0"></script>
+<script src="/js/post-details.js?v=7.2.0"></script>
+
+
 
   
 
@@ -2117,6 +1014,8 @@
 
   
 
+
+  
 
 
   

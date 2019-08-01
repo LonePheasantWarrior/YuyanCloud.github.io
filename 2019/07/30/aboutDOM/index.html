@@ -94,18 +94,18 @@
 
 
 
-  <meta name="description" content="很久就听闻DOM的强大了，一直认为他是页面各个元素在内存中的表现形式，然而好像并不是这样。   严格地讲，以下的DOM节点是指Element，但是DOM节点实际上是Node，在HTML中，Node包括Element、Comment、CDATA_SECTION等很多种，以及根节点Document类型，但是，绝大多数时候我们只关心Element，也就是实际控制页面结构的Node，其他类型的Node忽略">
+  <meta name="description" content="以下内容均有参考幕雪峰的官方网站很久就听闻DOM的强大了，一直认为他是页面各个元素在内存中的表现形式，然而好像并不是这样。   严格地讲，以下的DOM节点是指Element，但是DOM节点实际上是Node，在HTML中，Node包括Element、Comment、CDATA_SECTION等很多种，以及根节点Document类型，但是，绝大多数时候我们只关心Element，也就是实际控制页面结构的">
 <meta name="keywords" content="博客">
 <meta property="og:type" content="article">
 <meta property="og:title" content="关于Html DOM">
 <meta property="og:url" content="https://yuyancloud.github.io/2019/07/30/aboutDOM/index.html">
 <meta property="og:site_name" content="番茄花园">
-<meta property="og:description" content="很久就听闻DOM的强大了，一直认为他是页面各个元素在内存中的表现形式，然而好像并不是这样。   严格地讲，以下的DOM节点是指Element，但是DOM节点实际上是Node，在HTML中，Node包括Element、Comment、CDATA_SECTION等很多种，以及根节点Document类型，但是，绝大多数时候我们只关心Element，也就是实际控制页面结构的Node，其他类型的Node忽略">
+<meta property="og:description" content="以下内容均有参考幕雪峰的官方网站很久就听闻DOM的强大了，一直认为他是页面各个元素在内存中的表现形式，然而好像并不是这样。   严格地讲，以下的DOM节点是指Element，但是DOM节点实际上是Node，在HTML中，Node包括Element、Comment、CDATA_SECTION等很多种，以及根节点Document类型，但是，绝大多数时候我们只关心Element，也就是实际控制页面结构的">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-07-30T04:12:59.330Z">
+<meta property="og:updated_time" content="2019-07-31T08:59:27.339Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="关于Html DOM">
-<meta name="twitter:description" content="很久就听闻DOM的强大了，一直认为他是页面各个元素在内存中的表现形式，然而好像并不是这样。   严格地讲，以下的DOM节点是指Element，但是DOM节点实际上是Node，在HTML中，Node包括Element、Comment、CDATA_SECTION等很多种，以及根节点Document类型，但是，绝大多数时候我们只关心Element，也就是实际控制页面结构的Node，其他类型的Node忽略">
+<meta name="twitter:description" content="以下内容均有参考幕雪峰的官方网站很久就听闻DOM的强大了，一直认为他是页面各个元素在内存中的表现形式，然而好像并不是这样。   严格地讲，以下的DOM节点是指Element，但是DOM节点实际上是Node，在HTML中，Node包括Element、Comment、CDATA_SECTION等很多种，以及根节点Document类型，但是，绝大多数时候我们只关心Element，也就是实际控制页面结构的">
 
 
 
@@ -333,13 +333,23 @@
                 
               
 
-              <time title="创建时间：2019-07-30 09:38:20 / 修改时间：12:12:59" itemprop="dateCreated datePublished" datetime="2019-07-30T09:38:20+08:00">2019-07-30</time>
+              <time title="创建时间：2019-07-30 09:38:20" itemprop="dateCreated datePublished" datetime="2019-07-30T09:38:20+08:00">2019-07-30</time>
             </span>
           
 
           
             
 
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-07-31 16:59:27" itemprop="dateModified" datetime="2019-07-31T16:59:27+08:00">2019-07-31</time>
+              </span>
             
           
 
@@ -375,7 +385,7 @@
       
 
       
-        <p><em>很久就听闻DOM的强大了，一直认为他是页面各个元素在内存中的表现形式，然而好像并不是这样。</em>  </p>
+        <p><strong>以下内容均有参考<a href="https://www.liaoxuefeng.com/" target="_blank" rel="noopener">幕雪峰的官方网站</a></strong><br><em>很久就听闻DOM的强大了，一直认为他是页面各个元素在内存中的表现形式，然而好像并不是这样。</em>  </p>
 <p><em>严格地讲，以下的DOM节点是指Element，但是DOM节点实际上是Node，在HTML中，Node包括Element、Comment、CDATA_SECTION等很多种，以及根节点Document类型，但是，绝大多数时候我们只关心Element，也就是实际控制页面结构的Node，其他类型的Node忽略即可。根节点Document已经自动绑定为全局变量document。</em></p>
 <h2 id="DOM是什么"><a href="#DOM是什么" class="headerlink" title="DOM是什么"></a>DOM是什么</h2><p>DOM是HTML文档被浏览器解析之后的格式。他是一个树形结构，要改变期结构就需要javaScript来处理。<br>操作一个DOM无外乎就是对其进行<strong>遍历</strong>，<strong>更新</strong>，<strong>添加</strong>，<strong>删除</strong>。</p>
 <h2 id="使用getElement方法获取DOM"><a href="#使用getElement方法获取DOM" class="headerlink" title="使用getElement方法获取DOM"></a>使用<code>getElement</code>方法获取DOM</h2><p>获取DOM可以通过js的<code>document.getElementById()</code>方法获取单个DOM节点，或者通过<code>document.getElementsByTagName()</code>获取<code>TagName</code>为特定名称的一组DOM节点。也可以通过<code>document.getElementsByClassName()</code>获取<code>class</code>属性为特定名称的一组DOM节点。</p>
@@ -453,6 +463,10 @@
 
           <div class="post-nav-prev post-nav-item">
             
+              <a href="/2019/07/30/aboutHumanHappiness/" rel="prev" title="关于人类的幸福感">
+                关于人类的幸福感 <i class="fa fa-chevron-right"></i>
+              </a>
+            
           </div>
         </div>
       
@@ -520,7 +534,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">6</span>
+                    <span class="site-state-item-count">8</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -539,7 +553,11 @@
                     
                       
                     
-                    <span class="site-state-item-count">2</span>
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">4</span>
                     <span class="site-state-item-name">标签</span>
                   
                 </div>
